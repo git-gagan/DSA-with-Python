@@ -1,0 +1,116 @@
+In order to analyse the runtime of alogrithms in the most efficient manner, we need to ignore factors like:
+1) Machine Speed
+2) Programming language
+3) Load on system etc.
+
+For real analysis, the size of input (n) is taken into account. The analysis so done is called
+Asymptotic analysis.
+REASON:- For large inputs, a constant algorithm will always win over a one which is dependent on input.
+
+An algorithm F(n) is said to be growing faster than g(n) if:
+
+lim                 f(n)/g(n) = infinity
+n -> infinity       
+
+OR
+
+lim                 g(n)/f(n) = 0
+n -> infinity    
+
+
+HOW TO CALCULATE TIME COMPLEXITY?
+a) ignore lower order terms 
+b) ignore leading constants
+
+Order of growth of various functions:
+
+c < loglogn < logn < cuberoot n < sqaureroot n < n <n^2 < n^3 < 2^n < n^n
+
+Mathematical notations for Asymptotic analysis to measure order of growth are called asymptotic notations.
+There are 3 of them for:
+Best Case, Average Case, Worst Case
+
+BIG O:
+For upper bound worst Case
+f(n) = O(g(n)) if f(n) <= cg(n)
+
+Omega:
+For Lower bound best Case
+f(n) = Omega(g(n)) if f(n) >= cg(n) >= 0
+
+Theta:
+For exact bound average Case
+f(n) = theta(g(n)) if c1g(n) <= f(n) < c2g(n)
+
+
+Analysis of Loops:
+
+1)
+i = 0
+while i<n:
+    i += c or i -= c
+
+tc = O(n)
+
+2)
+i = 0
+while i<n:
+    i *= c
+
+tc = log n
+
+3)
+i = 0
+while i<n:
+    i **= c
+
+tc = loglog n
+
+4)
+i = 0
+while i<n:
+    i *= c
+i = 0
+while i<m:
+    i *= c
+
+tc = O(logm+logn)
+
+5)
+i = 0
+while i<n:
+    i *= c
+    j = 0
+    while j<m:
+        j *= c
+
+tc = O(log m * log n)
+
+
+SPACE COMPLEXITY:
+Less Important but still should be taken into consideration
+Space complexity includes the space of given input too.
+For better analysis, we focus on the term called Auxiliary Space which is order of growth of extra space 
+used by the program.
+
+NOTE:- In recursive functions, the call stack is always used thus raising the space complexity.
+
+
+ANALYSIS OF RECURSION:-
+To find the time complexity of recursive programs, we need to create and solve recurrence relations first.
+A simple recurrence relation is of the following forms:
+
+1) T(n) = 2T(n/2) + cn
+2) T(n) = T(n-1) + c
+
+In order to solve these recurrence relations, we use RECURSION TREE method which is one of the simplest.
+
+Process:-
+a) Write non-recursive part as root of tree and recursive part as children.
+b) Keep expanding children until we see a pattern.
+c) Add the work done at all levels of tree.
+
+Mostly, it may give a tight bound but in case if one node finishes off faster than others during recursion 
+as in the following example, we assume it to be a full tree and get an upper bound on the time complexity.
+
+Example: T(n) = T(n-1) + T(n-2) + c

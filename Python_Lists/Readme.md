@@ -1,2 +1,2 @@
 #### Python Lists Data structure...
-##### 15th August :- intro and average of lists in python (basics)
+##### 15th August :- intro and average of lists in python (basics), EvenOdd, Get Smaller elements

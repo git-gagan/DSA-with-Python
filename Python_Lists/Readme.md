@@ -1,2 +1,3 @@
 #### Python Lists Data structure...
 ##### 15th August :- intro and average of lists in python (basics), EvenOdd, Get Smaller elements
+##### 17th August :- Largest & Second Largest in a list (Naive & Optimized approach)

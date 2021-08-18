@@ -7,3 +7,4 @@ Learning Data Structures the Pythonic way...
 #### Progress Chart:
 
 ##### 10th August : Done with complexity Analysis
+##### 18th August : Done with Lists

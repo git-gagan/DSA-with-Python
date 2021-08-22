@@ -8,3 +8,4 @@ Learning Data Structures the Pythonic way...
 
 ##### 10th August : Done with complexity Analysis
 ##### 18th August : Done with Lists
+##### 23rd August : Done with Searching (Binary)
